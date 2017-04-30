@@ -1,0 +1,339 @@
+<!--
+Brendan Browne, Raja Khan, Chu Yoon Kong
+GUI & Web Design 
+Group Website Assessment
+-->
+
+<!DOCTYPE>
+
+<html>
+<head>
+	<title> BOW Shop </title>
+	<link rel="stylesheet" href = "../G8Stylesheet.css">
+	
+	<meta name="keywords" content="GMIT, Archery, Archery Ireland, World Archery, Club">
+	<meta name="description" content="GMIT Archery Club Website">
+	<meta name="author" content="Brendan Browne, Raja Khan, Chu Yoon Kong">
+	<meta http-equiv="default-style" content="G8Stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div id = "wrapper">
+		<div id = "header">
+
+			<div id = "header-image">
+		
+				<img src = "../images/GMIT_Logo.jpg" alt = "GMIT Logo" height ="100%" id="top">
+			</div>
+			<div id = "header-image">
+				<img src = "../images/GMIT_Hall1.jpg" alt = "GMIT Hall" height = "100%">
+			</div>
+			<div id = "header-image">
+				<img src = "../images/GMIT_Logo.jpg" alt = "GMIT Logo" height = "100%">
+			</div>
+		</div>
+		<div id = "menu">
+			<b>
+			<a href="../index.html">Home</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Club History/ClubHistory.html">Club History</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../HistoryOfArchery.html">History of Archery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Club History/Gallery.html">Gallery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Videos/videos.html">Videos</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Contact.html">Contact</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="shop.html">Shop</a>
+
+			</b>
+		</div>
+		<div id = "left">
+
+			<a href = "https://www.facebook.com/GMIT.Archery/"><img src = "../images/GMIT_Logo_F.jpg" alt = "GMIT Logo" width = "100%" 
+			title = "GMIT Facebook"></a>
+			&nbsp;
+			<a href = "https://worldarchery.org/"><img src = "../images/WAlogo.png" alt = "World Archery Logo" width = "100%" 
+			title = "World Archery"></a>
+			&nbsp;
+			<a href = "http://archery.ie/"><img src = "../images/Archery_Ireland_Logo.png" alt = "Archery Ireland Logo" width = "100%" 
+			title = "Archery Ireland"></a>
+			&nbsp;
+			<a href = "https://www.archery360.com/"><img src = "../images/archery360.png" alt = "Archery 360" width = "100%" 
+			title = "Archery 360"></a>
+			&nbsp;
+			<a href = "http://www.merlinarchery.co.uk/"><img src = "../images/merlin.jpg" alt = "Merlin Archery" width = "100%" 
+			title = "Merlin Archery"></a>
+		</div>
+		<br>
+
+		<div id = "main" style= "padding-right: 6px;">
+			<div id="buy">
+				<div id="loginBox" align = "center">
+					<input type="text" placeholder="UserName" id="user">&nbsp;
+					<input type="password" placeholder="Password" id="password">&nbsp;
+					<input type="button" value="LogIn" id="logIn" onclick = "userValidation()">	&nbsp;
+					<a href = "../registration.html"><input type="button" value="Register" id="register" ></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												
+					<a href = "../basket.html" id="cart"><image src="../images/cart.jpg" height = "40px" align = "left"><b id = "basket">Items in Cart: 0</b></a>
+				</div>
+				<div id="archerMenu">
+					<div id="menu1" align="center" style = "padding-top: 10px">
+						<image src="../images/storecat.jpg" width=100%>
+						<hr>
+						<br>
+						<div id = "buttons"><a href="arrows.html"><button>Arrows</button></a></div>
+						<div id = "buttons"><a href="bows.html"><button>Bows</button></a></div>
+						<div id = "buttons"><a href="stablizers.html"><button>Stablizers</button></a></div>
+						<div id = "buttons"><a href="strings.html"><button>Strings</button></a></div>
+						<div id = "buttons"><a href="shop.html"><button>Special Offers</button></a></div>					
+					</div>
+					
+					<div  id ="men1">
+						<div class="textOverImage">
+						<img src = "../images/mathews-trx-7.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									At 40 inches axle-to-axle, the TRX 7 offers superior stability and forgiveness on the range. The TRX features a newly designed 
+									Mini-crosscentric cam and our highly efficient AVS technology to produce speeds up to 332 feet per second. A true center nocking 
+									point ensures straight and level nock travel, further enhancing shot-to-shot consistency, while our industry-leading damping 
+									technology reduces post-shot vibration. The TRX is offered in four custom colour options.
+								</div>
+							</div>
+						</div>						
+						<marquee>MATHEWS TRX 7</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(0)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty0" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;1178.82</text>
+					</div>
+					
+					<div  id ="menu1">
+						<div class="textOverImage">
+						<img src = "../images/beast.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									The PSE Beast EXT was engineered to be the ultimate long-draw bow. Featuring PSE’s revolutionary new Wide-Track 
+									Target Limbs and Micro Adjust LAS, the Beast EXT features a 38&quot axle-to-axle, a 7 ¼&quot brace height, and is ready 
+									to take down a target or a whitetail at up to 350 fps. With its forged riser, Drive-style target cam, and our new 
+									RollerGlide cable guard system designed to eliminate friction, the Beast EXT provides a stable, rigid, and silky 
+									smooth shot with an 80% let-off.
+								</div>
+							</div>
+						</div>
+						
+						<marquee>PSE BEAST</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(1)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty1" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;1057.58</text>
+					</div>
+					
+				</div>
+				
+				<div id="archerMenu" style = "border-top:solid;">
+					<div id="menu1">
+						<div class="textOverImage">
+						<img src = "../images/prime-one.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									Prime One STX V2 - 36. BOW WEIGHT: 4.4 LBS. DRAW LENGTHS: 24.5&quot - 30&quot. IBO RATING: UP TO 325 FPS. 
+									DRAW WEIGHT: 40, 50, 60 LBS. AXLE TO AXLE: 36&quot. BRACE HEIGHT: 7&quot.
+								</div>
+							</div>
+						</div>
+						
+						<marquee>PRIME ONE</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(2)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty2" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;1711.00</text>
+					</div>
+					
+					<div  id ="men1">
+						<div class="textOverImage">
+						<img src = "../images/pse-supra.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									The Supra EXT takes the classic PSE Target bow and makes it even better with PSE's revolutionary new Wide-Track 
+									Target Limb System! With it's forged riser and new Drive style cam, the Supra EXT provides a stable, rigid, and silky 
+									smooth shot with a 75% and 65% let-off, while the all-new Wedge Lock limb pocket allows for fast, easy adjustment with 
+									its elegant two-screw design. 
+								</div>
+							</div>
+						</div>
+						
+						<marquee>PSE SUPRA</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(3)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty3" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;1056.10</text>
+					</div>
+					
+					<div  id ="menu1">
+						<div class="textOverImage">
+						<img src = "../images/elite-victory.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									Designed to dominate, the New ELITE Victory delivers on shootability like no other tournament bow we've ever created. 
+									With enhanced geometry and comprehensive anatomy the Victory's machined integral grip (no side plates), dual straight 
+									and 10 degree down stabilizer mounts, two rear stabilizer mounting positions, new reinforced Riser Cage design and 
+									exclusive Victory Cam system with adjustable valley round its enhanced features.
+							</div>
+						</div>
+						
+						<marquee>ELITE VICTORY</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(4)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty4" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;1161.06</text>
+						</div>
+						
+					</div>
+				
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="changeRed" id="divRed"></div>
+	<div class="changePurple" id="divPurple"></div>
+	<div class="changeOrange" id="divGold"></div>
+		
+<script>
+
+// Event listeners to change the wrapper colour
+var red = document.getElementById("divRed");
+red.addEventListener("click", changeR);
+
+var purple = document.getElementById("divPurple");
+purple.addEventListener("click", changeP);
+
+var gold = document.getElementById("divGold");
+gold.addEventListener("click", changeG);
+
+// Validate login details
+function userValidation()
+{
+	var userVal = JSON.parse(localStorage.UserInfoArr);
+	var i;
+	var found = false;
+	
+	var name = document.getElementById("user").value;
+	var pass = document.getElementById("password").value;
+	
+	for(i = 0; i < userVal.length; i++)
+	{
+		var username = userVal[i].firstName + " " + userVal[i].lastName;
+		
+		if(username == name && userVal[i].password == pass)
+		{
+			found = true;
+		}
+		
+	}
+	
+	if(found)
+	{
+		alert("Welcome " + name);
+		sessionStorage.login = name;
+	}
+	else
+	{
+		alert("Username or Password incorrect\nUser name is First name and Last name seperated by a space");
+	}
+}
+
+//Set up an Array with product details
+var bowOffers = [];
+
+function bows(product, price)
+{
+	this.product = product;
+	this.price = price;
+	bowOffers.push(this);
+}
+
+new bows("MATHEWS TRX 7", 1178.82);
+new bows("PSE BEAST", 1057.58);
+new bows("PRIME ONE", 1711.00);
+new bows("PSE SUPRA", 1056.10);
+new bows("ELITE VICTORY", 1161.06);
+
+localStorage.bowOffersArr = JSON.stringify(bowOffers);
+
+// Check if the cart exists
+if (sessionStorage.getItem("cartProductsArr") === null) 
+{
+	var cartProducts = [];
+	sessionStorage.cartProductsArr = JSON.stringify(cartProducts);
+}
+else
+{
+	cartProducts = JSON.parse(sessionStorage.cartProductsArr);
+	basketQuantity();
+}
+
+// Create an object for the cart
+function cart(i)
+{
+	this.product = bowOffers[i].product;
+	this.price = bowOffers[i].price;
+	this.qty = document.getElementById("qty" + i).value;
+	cartProducts.push(this);
+}
+
+// If logged in add object to cart
+function addToCart(i)
+{
+	if (sessionStorage.getItem("login") === null) 
+	{
+		alert("Please Log in");
+	}
+	else
+	{
+		new cart(i);
+		sessionStorage.cartProductsArr = JSON.stringify(cartProducts);
+		basketQuantity();
+	}
+}
+
+// Update quantity for items in basket
+function basketQuantity()
+{
+	var basket = 0;
+	
+	cartProducts = JSON.parse(sessionStorage.cartProductsArr);
+	
+	if(cartProducts.length<=0)
+	{
+		document.getElementById("basket").innerHTML = "  Items in Cart: 0";
+	}
+	else
+	{
+		for(var i = 0; i < cartProducts.length; i++)
+		{
+			basket += parseInt(cartProducts[i].qty);
+		}
+		document.getElementById("basket").innerHTML = "  Items in Cart: " + basket;
+	}
+}
+
+//Change the colour of the wrapper
+function changeR()
+{
+	document.getElementById("wrapper").style.backgroundColor = "#e6005c";
+}
+
+function changeP()
+{
+	document.getElementById("wrapper").style.backgroundColor = "#990099";
+}
+
+function changeG()
+{
+	document.getElementById("wrapper").style.backgroundColor = "gold";
+}
+</script>
+</body>
+</html>

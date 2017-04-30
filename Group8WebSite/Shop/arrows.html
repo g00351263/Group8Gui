@@ -1,0 +1,333 @@
+<!--
+Brendan Browne, Raja Khan, Chu Yoon Kong
+GUI & Web Design 
+Group Website Assessment
+-->
+
+<!DOCTYPE>
+
+<html>
+<head>
+	<title> ARROW Shop </title>
+	<link rel="stylesheet" href = "../G8Stylesheet.css">
+	
+	<meta name="keywords" content="GMIT, Archery, Archery Ireland, World Archery, Club">
+	<meta name="description" content="GMIT Archery Club Website">
+	<meta name="author" content="Brendan Browne, Raja Khan, Chu Yoon Kong">
+	<meta http-equiv="default-style" content="G8Stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div id = "wrapper">
+		<div id = "header">
+
+			<div id = "header-image">
+		
+				<img src = "../images/GMIT_Logo.jpg" alt = "GMIT Logo" height ="100%" id="top">
+			</div>
+			<div id = "header-image">
+				<img src = "../images/GMIT_Hall1.jpg" alt = "GMIT Hall" height = "100%">
+			</div>
+			<div id = "header-image">
+				<img src = "../images/GMIT_Logo.jpg" alt = "GMIT Logo" height = "100%">
+			</div>
+		</div>
+		<div id = "menu">
+			<b>
+			<a href="../index.html">Home</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Club History/ClubHistory.html">Club History</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../HistoryOfArchery.html">History of Archery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Club History/Gallery.html">Gallery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Videos/videos.html">Videos</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="../Contact.html">Contact</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="shop.html">Shop</a>
+
+			</b>
+		</div>
+		<div id = "left">
+
+			<a href = "https://www.facebook.com/GMIT.Archery/"><img src = "../images/GMIT_Logo_F.jpg" alt = "GMIT Logo" width = "100%" 
+			title = "GMIT Facebook"></a>
+			&nbsp;
+			<a href = "https://worldarchery.org/"><img src = "../images/WAlogo.png" alt = "World Archery Logo" width = "100%" 
+			title = "World Archery"></a>
+			&nbsp;
+			<a href = "http://archery.ie/"><img src = "../images/Archery_Ireland_Logo.png" alt = "Archery Ireland Logo" width = "100%" 
+			title = "Archery Ireland"></a>
+			&nbsp;
+			<a href = "https://www.archery360.com/"><img src = "../images/archery360.png" alt = "Archery 360" width = "100%" 
+			title = "Archery 360"></a>
+			&nbsp;
+			<a href = "http://www.merlinarchery.co.uk/"><img src = "../images/merlin.jpg" alt = "Merlin Archery" width = "100%" 
+			title = "Merlin Archery"></a>
+		</div>
+		<br>
+
+		<div id = "main" style= "padding-right: 6px;">
+			<div id="buy">
+				<div id="loginBox" align = "center">
+					<input type="text" placeholder="UserName" id="user">&nbsp;
+					<input type="password" placeholder="Password" id="password">&nbsp;
+					<input type="button" value="LogIn" id="logIn" onclick = "userValidation()">	&nbsp;
+					<a href = "../registration.html"><input type="button" value="Register" id="register" ></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												
+					<a href = "../basket.html" id="cart"><image src="../images/cart.jpg" height = "40px" align = "left"><b id = "basket">Items in Cart: 0</b></a>
+				</div>
+				<div id="archerMenu">
+					<div id="menu1" align="center" style = "padding-top: 10px">
+						<image src="../images/storecat.jpg" width=100%>
+						<hr>
+						<br>
+						<div id = "buttons"><a href="arrows.html"><button>Arrows</button></a></div>
+						<div id = "buttons"><a href="bows.html"><button>Bows</button></a></div>
+						<div id = "buttons"><a href="stablizers.html"><button>Stablizers</button></a></div>
+						<div id = "buttons"><a href="strings.html"><button>Strings</button></a></div>
+						<div id = "buttons"><a href="shop.html"><button>Special Offers</button></a></div>				
+					</div>
+					
+					<div  id ="men1">
+						<div class="textOverImage">
+						<img src = "../images/x7.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									X7 Eclipse is the number one choice of target and 3D pros. The Super Swage and UNI nock systems aligns the Super Nock 
+									directly with the arrow shaft. Stringent manufacturing tolerances combine for the most accurate arrow ever made.
+								</div>
+							</div>
+						</div>
+						
+						<marquee>EASTON X7 ECLIPSE</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(0)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty0" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;7.14</text>
+					</div>
+					
+					<div  id ="menu1">
+						<div class="textOverImage">
+							<img src = "../images/powerflight.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									Carbon PowerFlight delivers the right balance of speed and hard-hitting energy in an all carbon arrow C2 shaft. 
+									Straightness: &#8723; .006. Weight tolerance: &#8723; 2.0. Black, Micro-smooth finish. C2 Carbon construction.
+								</div>	
+							</div>
+						</div>
+						
+						<marquee>POWERFLIGHT</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(1)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty1" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;7.50</text>
+					</div>
+					
+				</div>
+				
+				<div id="archerMenu" style = "border-top:solid;">
+					<div id="menu1">
+						<div class="textOverImage">
+						<img src = "../images/xbuster.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									The first arrow in the Carbon Express line engineered to withstand the punishment arrows receive from hard indoor targets. 
+									The X-Buster was developed to serve indoor, 20 yard/18 meter tournaments and conforms to the 9.3mm FITA and NAA rules. 
+									The X-Buster is heavier in grains per inch than CXL Pro arrows and the additional weight eliminates the need for archers 
+									to &qupttune down&quot their equipment in order to obtain slower more forgiving indoor speeds.
+								</div>
+							</div>
+						</div>
+						
+						<marquee>XBUSTER</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(2)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty2" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;16.37</text>
+					</div>
+					
+					<div  id ="men1">
+						<div class="textOverImage">
+						<img src = "../images/x10.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									World-class archers look to the X10 for higher scores and winning performance. The X10 barreled profile provides 
+									maximum stability in unpredictable windy conditions. Designed for optimum performance with recurve bows.
+								</div>
+							</div>
+						</div>
+						
+						<marquee>EASTON X10</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(3)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty3" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;56.29</text>
+					</div>
+					
+					<div  id ="menu1">
+						<div class="textOverImage">
+						<img src = "../images/x23.jpg" class = "image">
+							<div class = "after">
+								<div class = "text">
+									The sleek, classic, diamond polished anodize silver finish is distinctive on the line and in your quiver.
+									7178-T9 Aerospace Alloy. Diamond polished anodized silver finish. Guaranteed straightness: &#8723; .001. 
+									Weight tolerance: &#8723; 3/4%. Strength (PSI): 105,000.
+								</div>
+							</div>
+						</div>
+						
+						<marquee>EASTON X23</marquee>
+						<hr>
+						<button id = "buttonCart" onclick = "addToCart(4)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="qty4" placeholder="Qty" size = "2">
+						<hr>
+						<text id="inttext2">Best Value Pack for only &euro;13.89</text>
+					</div>
+					
+				</div>
+			
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="changeRed" id="divRed"></div>
+	<div class="changePurple" id="divPurple"></div>
+	<div class="changeOrange" id="divGold"></div>
+		
+<script>
+
+// Event listeners to change the wrapper colour
+var red = document.getElementById("divRed");
+red.addEventListener("click", changeR);
+
+var purple = document.getElementById("divPurple");
+purple.addEventListener("click", changeP);
+
+var gold = document.getElementById("divGold");
+gold.addEventListener("click", changeG);
+
+// Validate login details
+function userValidation()
+{
+	var userVal = JSON.parse(localStorage.UserInfoArr);
+	var i;
+	var found = false;
+	
+	var name = document.getElementById("user").value;
+	var pass = document.getElementById("password").value;
+	
+	for(i = 0; i < userVal.length; i++)
+	{
+		var username = userVal[i].firstName + " " + userVal[i].lastName;
+		
+		if(username == name && userVal[i].password == pass)
+		{
+			found = true;
+		}
+		
+	}
+	
+	if(found)
+	{
+		alert("Welcome " + name);
+		sessionStorage.login = name;
+	}
+	else
+	{
+		alert("Username or Password incorrect\nUser name is First name and Last name seperated by a space");
+	}
+}
+
+//Set up an Array with product details
+var arrowOffers = [];
+
+function arrows(product, price)
+{
+	this.product = product;
+	this.price = price;
+	arrowOffers.push(this);
+}
+
+new arrows("EASTON X7 ECLIPSE", 7.14);
+new arrows("POWERFLIGHT", 7.50);
+new arrows("XBUSTER", 16.37);
+new arrows("EASTON X10", 56.29);
+new arrows("EASTON X23", 13.89);
+
+localStorage.arrowOffersArr = JSON.stringify(arrowOffers);
+
+// Check if the cart exists
+if (sessionStorage.getItem("cartProductsArr") === null) 
+{
+	var cartProducts = [];
+	sessionStorage.cartProductsArr = JSON.stringify(cartProducts);
+}
+else
+{
+	cartProducts = JSON.parse(sessionStorage.cartProductsArr);
+	basketQuantity();
+}
+
+// Create an object for the cart
+function cart(i)
+{
+	this.product = arrowOffers[i].product;
+	this.price = arrowOffers[i].price;
+	this.qty = document.getElementById("qty" + i).value;
+	cartProducts.push(this);
+}
+
+// If logged in add object to cart
+function addToCart(i)
+{
+	if (sessionStorage.getItem("login") === null) 
+	{
+		alert("Please Log in");
+	}
+	else
+	{
+		new cart(i);
+		sessionStorage.cartProductsArr = JSON.stringify(cartProducts);
+		basketQuantity();
+	}
+}
+
+// Update quantity for items in basket
+function basketQuantity()
+{
+	var basket = 0;
+	
+	cartProducts = JSON.parse(sessionStorage.cartProductsArr);
+	
+	if(cartProducts.length<=0)
+	{
+		document.getElementById("basket").innerHTML = "  Items in Cart: 0";
+	}
+	else
+	{
+		for(var i = 0; i < cartProducts.length; i++)
+		{
+			basket += parseInt(cartProducts[i].qty);
+		}
+		document.getElementById("basket").innerHTML = "  Items in Cart: " + basket;
+	}
+}
+
+//Change the colour of the wrapper
+function changeR()
+{
+	document.getElementById("wrapper").style.backgroundColor = "#e6005c";
+}
+
+function changeP()
+{
+	document.getElementById("wrapper").style.backgroundColor = "#990099";
+}
+
+function changeG()
+{
+	document.getElementById("wrapper").style.backgroundColor = "gold";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+#wrapper{
+	width: 1066.95px; 
+	margin: auto; 
+	background-color: gold; 
+	overflow: hidden; 
+	border: 2px solid darkcyan;
+	}
+	
+#header{
+	width: 100%; 
+	height: 100px; 
+	float:left; 
+	text-align: center;
+	}
+	
+#menu{
+	width: 99.7%; 
+	height: 30px; 
+	float: left; 
+	display: -webkit-flex; -webkit-align-items: center;
+    align-items: center; justify-content:center; 
+	border: 2px solid black; 
+	letter-spacing: 2px; 
+	line-height: 200%;
+	font-family: Georgia, Times, serif;
+	}
+
+#left{
+	width: 20%; 
+	float: left; 
+	left; margin: 10px;
+	}
+	
+#main{
+	width: 77.5%; 
+	float: left;
+	font-family: serif; 
+	overflow: auto;
+	}
+
+#buy{
+	border: solid;
+	width: 99%;
+	height: 862px;
+	margin-top: 10px;
+	margin-right: 20px;
+	border-radius: 15px;
+	}
+
+#loginBox{
+	display: -webkit-flex; -webkit-align-items: center;
+    align-items: center; justify-content:center;
+	border-bottom: solid;
+}
+
+#archerMenu{
+	height: 47.5%;
+	width: 100%;
+	float: left;
+	}
+
+#menu1{
+	width: 33.13%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	}
+	
+#men1{
+	width: 33%;
+	height: 100%;
+	border-left: solid;
+	border-right: solid;
+	float: left;
+	text-align: center;
+	}
+	
+#cart{
+	height: 40px;
+	width: 160px;
+	display: -webkit-flex; -webkit-align-items: center;
+    align-items: center; justify-content:left;	
+	}
+
+#header-image{height: 100%; float: left;}
+
+body{
+	background-image: url("images/target.jpg"); 
+	background-size : 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+	color: purple;
+}
+
+a:hover{
+	color:orange;
+	background-color: none;
+}
+
+a:active{
+	color:blue;
+	background-color: #fff;
+}
+
+p{
+	text-indent: 30px;
+	text-align: left;
+	padding-left: 30px;
+
+}
+
+.index{
+	  font-size: 1.5em;
+	  line-height: 200%;
+}
+
+.history{
+	font-size: 1.5em;
+	line-height: 150%;
+}
+
+.footer{
+	text-align: center;	
+}
+
+h1,h3{
+	font-family: AR Essence;
+	text-shadow: 2px 2px 5px gray;
+	text-indent: 30px;
+}
+
+strong, b{
+	text-shadow: 2px 2px 5px gray;
+}
+
+input[type="button"]:hover {
+    color: green;
+	border-radius: 4px;
+}
+	
+input[type="button"] {
+    width: 100px;
+}
+
+button{
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-style: groove;
+	border-width: 5px;
+}
+
+button:hover {
+    width: 250px;
+	height: 50px;
+	color: green;
+}
+
+.shop{
+	color: black;
+}
+
+#inttext{
+	"text-align:center;
+	color: red;
+	font-weight: bold;
+}
+#inttext2{
+	font-style: arial;
+	color:	blue;
+	"text-align:center;
+}
+
+#buttons{
+	width: 100%; 
+	height: 16.6%;
+}
+
+#buttonCart{
+	width: 100px;
+	height: 30px;
+	border-radius: 8px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-style: groove;
+	border-width: 5px;
+}
+
+.textOverImage {
+	position: relative;
+	width:100%;
+	height:75%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.after {
+	position: absolute;	
+	bottom: 0;
+	left: 0;
+	right:0;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: 0.5s ease;
+	opacity: .85;
+}
+
+.textOverImage:hover .after{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+
+}
+
+.text {
+	width: 75%;
+	word-wrap: break-word;
+	color: black;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+input.qty{
+	autocomplet:on;
+}
+
+div.changeRed {
+	width: 30px;
+	border-radius: 10px;
+	height: 30px;
+	background-color: #e6005c;
+	float: left;
+	cursor: pointer;
+	box-shadow: 0px 3px 2px 0px black;
+	margin-left: 50%;
+	margin-right: 15px;
+	margin-top: 8px;
+	transition: 0.5s;
+	transform: rotate(-180deg) translate(-5px, -5px);
+}
+
+div.changeRed:hover{
+	width:2.5%;
+	height:4.5%;
+	transition: 0.5s;
+	transform: rotate(180deg) translate(-5px, -5px);
+}
+
+div.changePurple {
+	width: 30px;
+	border-radius: 10px;
+	height: 30px;
+	background-color: #990099;
+	float: left;
+	cursor: pointer;
+	box-shadow: 0px 3px 2px 0px black;
+	margin-right: 15px;
+	margin-top: 8px;
+	transition: 0.5s;
+	transform: rotate(-180deg) translate(-5px, -5px);
+}
+
+div.changePurple:hover{
+	width:2.5%;
+	height:4.5%;
+	transition: 0.5s;
+	transform: rotate(180deg) translate(-5px, -5px);
+}
+
+div.changeOrange {
+	width: 30px;
+	border-radius: 10px;
+	height: 30px;
+	background-color: orange;
+	float: left;
+	cursor: pointer;
+	box-shadow: 0px 3px 2px 0px black;
+	margin-top: 8px;
+	margin-right: 15px;
+	transition: 0.5s;
+	transform: rotate(-180deg) translate(-5px, -5px);
+}
+
+div.changeOrange:hover{
+	width:2.5%;
+	height:4.5%;
+	transition: 0.5s;
+	transform: rotate(180deg) translate(-5px, -5px);
+	
+}
+	

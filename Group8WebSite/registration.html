@@ -1,0 +1,227 @@
+<!--
+Brendan Browne, Raja Khan, Chu Yoon Kong
+GUI & Web Design 
+Group Website Assessment
+-->
+
+<!DOCTYPE>
+
+<html>
+<head>
+	<title> Registration Form </title>
+	<link rel="stylesheet" href = "G8Stylesheet.css">
+	
+	<meta name="keywords" content="GMIT, Archery, Archery Ireland, World Archery, Club">
+	<meta name="description" content="GMIT Archery Club Website">
+	<meta name="author" content="Brendan Browne, Raja Khan, Chu Yoon Kong">
+	<meta http-equiv="default-style" content="G8Stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id = "wrapper">
+		<div id = "header">
+			<div id = "header-image">
+				<img src = "images/GMIT_Logo.jpg" alt = "GMIT Logo" height ="100%" id="top">
+			</div>
+			<div id = "header-image">
+				<img src = "images/GMIT_Hall1.jpg" alt = "GMIT Hall" height = "100%">
+			</div>
+			<div id = "header-image">
+				<img src = "images/GMIT_Logo.jpg" alt = "GMIT Logo" height = "100%">
+			</div>
+		</div>
+		
+		<div id = "menu">
+			<b>
+			<a href="index.html">Home</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Club History/ClubHistory.html">Club History</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="HistoryOfArchery.html">History of Archery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Club History/Gallery.html">Gallery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Videos/videos.html">Videos</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Contact.html">Contact</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Shop/shop.html">Shop</a>
+			</b>
+		</div>
+
+		<div id = "left">
+			<a href = "https://www.facebook.com/GMIT.Archery/"><img src = "images/GMIT_Logo_F.jpg" alt = "GMIT Logo" width = "100%" 
+			title = "GMIT Facebook"></a>
+			&nbsp;
+			<a href = "https://worldarchery.org/"><img src = "images/WAlogo.png" alt = "World Archery Logo" width = "100%" 
+			title = "World Archery"></a>
+			&nbsp;
+			<a href = "http://archery.ie/"><img src = "images/Archery_Ireland_Logo.png" alt = "Archery Ireland Logo" width = "100%" 
+			title = "Archery Ireland"></a>
+			&nbsp;
+			<a href = "https://www.archery360.com/"><img src = "images/archery360.png" alt = "Archery 360" width = "100%" 
+			title = "Archery 360"></a>
+			&nbsp;
+			<a href = "http://www.merlinarchery.co.uk/"><img src = "images/merlin.jpg" alt = "Merlin Archery" width = "100%"
+			title = "Merlin Archery"></a>
+			&nbsp;
+		</div>
+			
+		<div id = "main" align = "center">
+			&nbsp;
+			<form align = "center" autocomplete = "on">
+				&nbsp;
+				<table align = "center" border = "1">
+					<tr>
+						<th colspan = "2">Registration</th>
+					</tr>
+					
+					<tr>
+						<th>First Name</th>
+						<td><input type = "text" name = "FirstName" id = "FirstName"></input></td>
+					</tr>
+					
+					<tr>
+						<th>Last Name</th>
+						<td><input type = "text" name = "LastName" id = "LastName"></input></td>
+					</tr>
+					
+					<tr>
+						<th>Email</th>
+						<td><input type = "text" name = "Email" id = "Email"></input></td>
+					</tr>
+					
+					<tr>
+						<th align = "middle">Password</th>
+						<td><input type = "password"  placeholder = "Enter Password" id = "password"></input></td>
+					</tr>
+					<tr>
+						<th align = "middle">Re-Enter Password</th>
+						<td><input type = "password"  placeholder = "Re-Enter Password" id = "password2"></input></td>
+					</tr>
+				
+				</table>
+				
+			</form>
+			
+			<button id = "Register" onclick = "register()">Submit</button>
+			
+		</div>
+
+	</div>
+	
+</body>
+
+<script>
+
+if (localStorage.getItem("UserInfoArr") === null) 
+{
+	var userInformation = [];
+	new user("Brendan", "Browne", "b.j.d.browne@gmail.com", "21062004", "21062004");
+	localStorage.UserInfoArr = JSON.stringify(userInformation);
+}
+else
+{
+	userInformation = JSON.parse(localStorage.UserInfoArr);
+}
+
+function user(firstName, lastName, email, password, password2)
+{
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.email = email;
+	this.password = password;
+	this.password2 = password2;
+	userInformation.push(this);
+}
+
+var userVal;
+
+function register()
+{
+	validateRegister();
+}
+
+function validateRegister()
+{
+	userVal = JSON.parse(localStorage.UserInfoArr);
+	var username = document.getElementById("FirstName").value + " " + document.getElementById("LastName").value;
+	var found = false;
+	
+	for(i = 0; i < userVal.length; i++)
+	{
+		var name = userVal[i].firstName + " " + userVal[i].lastName;
+		
+		if(username == name)
+		{
+			found = true;
+			break;
+		}
+	}
+	
+	if(found)
+	{
+		alert("Username already exists - please try again");
+	}
+	else
+	{
+		validateEmail();
+	}
+}
+
+function validateEmail()
+{
+	userVal = JSON.parse(localStorage.UserInfoArr);
+	var newEmail = document.getElementById("Email").value;
+	var emailFound = false;
+	
+	if(newEmail.includes('@') && newEmail.includes('.'))
+	{
+		for(i = 0; i < userVal.length; i++)
+		{
+			var email = userVal[i].email;
+			
+			if(newEmail == email)
+			{
+				emailFound = true;
+				break;
+			}
+		}
+		
+		if(emailFound)
+		{
+			alert("Email already exists - please try again");
+		}
+		else
+		{
+			passwordValidate();
+		}
+	}
+	else
+	{
+		alert("Email must include @ and .");
+	}
+}
+
+function passwordValidate()
+{
+	var pass1 = document.getElementById("password").value;
+	var pass2 = document.getElementById("password2").value;
+	
+	if(pass1 == pass2 && pass1 != null && pass2 != null)
+	{
+		new user(document.getElementById("FirstName").value,
+		document.getElementById("LastName").value,
+		document.getElementById("Email").value,
+		document.getElementById("password").value,
+		document.getElementById("password2").value);
+		
+		localStorage.UserInfoArr = JSON.stringify(userInformation);
+		var name = document.getElementById("FirstName").value + " " + document.getElementById("LastName").value;
+		sessionStorage.login = name;
+		alert("registered");
+	}
+	else
+	{
+		alert("Passwords dont match");
+	}
+}
+
+
+</script>
+
+</html>
