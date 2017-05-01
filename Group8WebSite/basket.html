@@ -1,0 +1,243 @@
+<!--
+Brendan Browne, Raja Khan, Chu Yoon Kong
+GUI & Web Design 
+Group Website Assessment
+-->
+
+<!DOCTYPE>
+
+<html>
+<head>
+	<title> Basket </title>
+	<link rel="stylesheet" href = "G8Stylesheet.css">
+	
+	<meta name="keywords" content="GMIT, Archery, Archery Ireland, World Archery, Club">
+	<meta name="description" content="GMIT Archery Club Website">
+	<meta name="author" content="Brendan Browne, Raja Khan, Chu Yoon Kong">
+	<meta http-equiv="default-style" content="BrendansStylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div id = "wrapper">
+		<div id = "header">
+
+			<div id = "header-image">
+		
+				<img src = "images/GMIT_Logo.jpg" alt = "GMIT Logo" height ="100%" id="top">
+			</div>
+			<div id = "header-image">
+				<img src = "images/GMIT_Hall1.jpg" alt = "GMIT Hall" height = "100%">
+			</div>
+			<div id = "header-image">
+				<img src = "images/GMIT_Logo.jpg" alt = "GMIT Logo" height = "100%">
+			</div>
+		</div>
+		<div id = "menu">
+			<b>
+			<a href="index.html">Home</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Club History/ClubHistory.html">Club History</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="HistoryOfArchery.html">History of Archery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Club History/Gallery.html">Gallery</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Videos/videos.html">Videos</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Contact.html">Contact</a>&nbsp;&nbsp; - &nbsp;&nbsp;
+			<a href="Shop/shop.html">Shop</a>
+
+			</b>
+		</div>
+		<div id = "left">
+
+			<a href = "https://www.facebook.com/GMIT.Archery/"><img src = "images/GMIT_Logo_F.jpg" alt = "GMIT Logo" width = "100%" 
+			title = "GMIT Facebook"></a>
+			&nbsp;
+			<a href = "https://worldarchery.org/"><img src = "images/WAlogo.png" alt = "World Archery Logo" width = "100%" 
+			title = "World Archery"></a>
+			&nbsp;
+			<a href = "http://archery.ie/"><img src = "images/Archery_Ireland_Logo.png" alt = "Archery Ireland Logo" width = "100%" 
+			title = "Archery Ireland"></a>
+			&nbsp;
+			<a href = "https://www.archery360.com/"><img src = "images/archery360.png" alt = "Archery 360" width = "100%" 
+			title = "Archery 360"></a>
+			&nbsp;
+			<a href = "http://www.merlinarchery.co.uk/"><img src = "images/merlin.jpg" alt = "Merlin Archery" width = "100%" 
+			title = "Merlin Archery"></a>
+		</div>
+		<br>
+
+		<div id = "main" style= "padding-right: 6px;">
+			<div id="buy">
+				<div id="loginBox" align = "center">
+					<input type="text" placeholder="UserName" id="user">&nbsp;
+					<input type="password" placeholder="Password" id="password">&nbsp;
+					<input type="button" value="LogIn" id="logIn" >	&nbsp;
+					<a href="registration.html"><input type="button" value="Register" id="register" ></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<br>
+					<br>
+					<br>
+				</div>
+					
+		
+				<div id="products" style="width:50%; height: 93.5%; border-right:solid; float: left;">
+					ITEM Description
+					<hr>
+					<div id = "prodDetails">
+					
+					</div>
+					
+				</div>
+				<div id="quantity"style="width:24.7%;height: 70%; border-right:solid; border-bottom: solid ; float: left;">
+					Quantity
+					<hr>
+					<div id = "qtyDetails">
+					
+					</div>
+				</div>
+				<div id="price"style="width:24.56%;height: 70%; border-bottom: solid; float: left;">
+					Price Per Unit
+					<hr>
+					<div id = "priceDetails">
+					</div>
+				</div>
+				
+				<div id = "total">
+					Total Cost
+					<hr>
+					<div align = "center">
+						
+						<font size = "5">&euro; <b id = "totalCost">
+						</b></font>
+						
+						<hr>
+						
+						Discount Coupon code&nbsp;<input type="text" id="coupon" placeholder="enter coupon code"></input>
+						<input type="button" value="Get Discount" id="getDiscount" onclick="discount()">
+						
+					</div>
+					
+					<div align = "center">
+						<hr>
+						Total After Discount:  &euro; <b id="totalDiscount"></b>
+						<hr>
+						
+						<a href = "https://www.paypal.com/ie/home"><input type="button" value="Checkout" id="Checkout"></a>
+					</div>
+				
+				
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="changeRed" id="divRed"></div>
+	<div class="changePurple" id="divPurple"></div>
+	<div class="changeOrange" id="divGold"></div>
+		
+<script>
+
+// Event listeners to change the wrapper colour
+var red = document.getElementById("divRed");
+red.addEventListener("click", changeR);
+
+var purple = document.getElementById("divPurple");
+purple.addEventListener("click", changeP);
+
+var gold = document.getElementById("divGold");
+gold.addEventListener("click", changeG);
+
+var cartBasket = JSON.parse(sessionStorage.cartProductsArr);
+var text, i, total = 0;
+
+// Output the product name
+function productOutput()
+{
+	text = "<ul>";
+	for(i = 0; i < cartBasket.length; i++)
+	{
+		text += "<li>" + cartBasket[i].product + "</li>";
+	}
+	text += "</ul>";
+	document.getElementById("prodDetails").innerHTML = text;
+}
+
+productOutput();
+
+// Output the product quantity
+function quantityOutput()
+{
+	text = "<ul>";
+	for(i = 0; i < cartBasket.length; i++)
+	{
+		text += "<li>" + cartBasket[i].qty + "</li>";
+	}
+	text += "</ul>";
+	document.getElementById("qtyDetails").innerHTML = text;
+}
+
+quantityOutput();
+
+// Output the product price
+function priceOutput()
+{
+	text = "<ul>";
+	for(i = 0; i < cartBasket.length; i++)
+	{
+		text += "<li>" + cartBasket[i].price + "</li>";
+	}
+	text += "</ul>";
+	document.getElementById("priceDetails").innerHTML = text;
+}
+
+priceOutput()
+
+// Output the total Cost
+function totalCost()
+{
+	for(i = 0; i < cartBasket.length; i++)
+	{
+		total += (cartBasket[i].price * cartBasket[i].qty);
+	}
+	
+	document.getElementById("totalCost").innerHTML = (total.toFixed(2));
+}
+
+totalCost();
+
+// Discount
+function discount()
+{
+	var code = document.getElementById("coupon").value;
+	var totalWithDiscount;
+	
+	if(code != "ten")
+	{
+		alert("Wrong Code");	
+	}
+	else
+	{
+		totalWithDiscount = total - 10;
+		document.getElementById("totalDiscount").innerHTML = totalWithDiscount.toFixed(2);
+	}
+}
+
+//Change the colour of the wrapper
+function changeR()
+{
+	document.getElementById("wrapper").style.backgroundColor = "#e6005c";
+}
+
+function changeP()
+{
+	document.getElementById("wrapper").style.backgroundColor = "#990099";
+}
+
+function changeG()
+{
+	document.getElementById("wrapper").style.backgroundColor = "gold";
+}
+</script>
+
+</body>
+</html>
